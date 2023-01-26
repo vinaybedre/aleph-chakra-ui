@@ -1,5 +1,7 @@
 import { Head, Link } from "aleph/react";
 
+import { ChakraProvider, Button } from "@chakra-ui/react";
+
 const externalLinks = [
   ["Get Started", "https://alephjs.org/docs/get-started"],
   ["Docs", "https://alephjs.org/docs"],
@@ -23,6 +25,9 @@ export default function Index() {
         building web applications
         <br /> with modern toolings.
       </p>
+      <ChakraProvider>
+        <Button>Click me</Button>
+      </ChakraProvider>
       <div className="external-links">
         {externalLinks.map(([text, href]) => (
           <a href={href} target="_blank" key={href}>
